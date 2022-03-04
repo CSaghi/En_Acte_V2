@@ -1,0 +1,35 @@
+
+
+.card {
+    width: 300px;
+    text-align: center;
+    background-color: $color2;
+    border: 1px solid $color1;
+
+    h3 {
+        font-family: 'Sriracha', cursive;
+        font-size: 30px;
+        color: $color3;
+        padding-top: 12px;
+    }
+    p {
+        text-align: start;
+        padding: 12px;
+    }
+    .card-img {
+        position: relative;
+        height: auto;
+    }
+    img {
+        width: 100%;
+    }
+
+    .card-button {
+        position: fixed;
+        color: $color3;
+        background-color: $color3;
+        border: 1px solid $color3;
+        border-radius: 12px;
+        z-index: 3;
+    }
+}

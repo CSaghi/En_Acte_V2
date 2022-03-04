@@ -1,0 +1,33 @@
+.bandeau {
+    width: $width;
+    height: 850px;
+    background-color: $color1;
+    background-image: url(../img/bandeau001.jpg);
+    
+
+    h1 {
+        font-weight: 800;
+        font-size: 75px;
+        text-transform: uppercase;
+        border-bottom: 3px solid $color3;
+        color: $color2;
+        z-index: 1;
+        padding-bottom: 15px;
+    }
+
+    h2 {
+        font-family: 'Sriracha', cursive;
+        font-size: 40px;
+        color: $color2;
+        padding-top: 15px;
+    }
+
+    .titre {
+        position: relative;
+        top: 250px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+}
