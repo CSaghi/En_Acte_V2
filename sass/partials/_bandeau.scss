@@ -1,7 +1,6 @@
 .bandeau {
-    width: $width;
-    height: 850px;
-    background-color: $color1;
+    max-width: $width;
+    height: 750px;
     background-image: url(../img/bandeau001.jpg);
     
 
@@ -24,7 +23,7 @@
 
     .titre {
         position: relative;
-        top: 250px;
+        top: 200px;
         display: flex;
         flex-direction: column;
         align-items: center;

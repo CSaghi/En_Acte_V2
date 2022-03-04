@@ -25,7 +25,7 @@ a {
     width: 220px;
     height: 3px;
     background-color: $color3;
-    margin-bottom: 60px;
+    margin: 60px 0;
 }
 
 header {
@@ -55,13 +55,13 @@ header {
         max-width: $width;
         display: flex;
         align-items: center;
-        height: 150px;
+        height: 120px;
         margin: 0 auto;
     }
 }
 
 main {
-    width: $width;
+    max-width: $width;
     margin: 0 auto;
 }
 
@@ -69,7 +69,7 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 60px;
+    padding: 0 60px;
 
     h2 {
         font-family: 'Sriracha', cursive;
@@ -83,10 +83,14 @@ section {
     }
 
     p:last-of-type {
-        margin-bottom: 60px;
+        margin-bottom: 0;
     }
 }
 
 .flex {
     display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+    
 }

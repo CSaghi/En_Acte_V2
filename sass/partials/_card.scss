@@ -1,7 +1,7 @@
 
 
 .card {
-    width: 300px;
+    max-width: 350px;
     text-align: center;
     background-color: $color2;
     border: 1px solid $color1;
@@ -10,26 +10,31 @@
         font-family: 'Sriracha', cursive;
         font-size: 30px;
         color: $color3;
-        padding-top: 12px;
+        padding-top: 20px;
     }
     p {
         text-align: start;
-        padding: 12px;
+        padding: 20px;
     }
     .card-img {
         position: relative;
-        height: auto;
+        margin-top: 40px;
     }
     img {
         width: 100%;
+        height: auto;
     }
 
     .card-button {
-        position: fixed;
-        color: $color3;
-        background-color: $color3;
-        border: 1px solid $color3;
-        border-radius: 12px;
+        position: absolute;
+        left: 25%;
+        right: 25%;
+        top: 40%;
+        color: $color2;
+        background-color:$color1-opa;
+        border: 1px solid $color2;
+        border-radius: 6px;
+        padding :10px;
         z-index: 3;
     }
 }
