@@ -2,4 +2,23 @@ $color1: #000000;
 $color1-opa:#00000055;
 $color2: #ffffff;
 $color3: #C42727;
-$width: 1200px;
+$width: 1440px;
+$shadow:5px 5px 10px rgba(195, 40, 40, 0.3);
+
+@mixin ecran-l {
+    @media screen and (min-width: 1440px) {
+        @content;
+      }
+}
+
+@mixin ecran-s {
+    @media screen and (max-width: 1200px) {
+        @content;
+      }
+}
+
+@mixin mobile {
+    @media screen and (max-width: 800px) {
+      @content;
+    }
+  }

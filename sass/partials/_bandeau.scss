@@ -1,7 +1,14 @@
 .bandeau {
     max-width: $width;
-    height: 750px;
-    background-image: url(../img/bandeau001.jpg);
+    height: 700px;
+    background-image: url(../img/bandeau001.jpg) ;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include ecran-s {
+        height: 600px;
+    }
     
 
     h1 {
@@ -27,6 +34,9 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        @include ecran-s {
+            top: 150px;
+        }
 
     }
 }
