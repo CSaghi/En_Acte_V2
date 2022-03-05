@@ -1,63 +1,33 @@
+// const dropdown = document.getElementById("dropdown");
+// const dropClick = document.querySelector(".drop");
+const menuHeader = document.getElementById("headerNav");
+const items = document.querySelectorAll(".nav-item");
 
-$(document).ready(function(){
-    $('.carousel').slick({
-      infinite: true,
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      infinite: true,
-      dots: true,
-      responsive: [{
-
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 1}
-          }, {
-
-          breakpoint: 800,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1}
-          }]
-  });
-
-  $('.carousel-accueil').slick({
-    infinite: true,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    infinite: true,
-    dots: true,
-    responsive: [{
-
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1}
-      }, {
-
-      breakpoint: 800,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1}
-      }]
-    });
-
-    
-});
-
-
-function responsive() {
-    let x = document.getElementById("headerNav");
-    let items = document.querySelectorAll(".nav-item")
-    if (x.className === "headerNav") {
-      x.className += " responsive";
+function responsive() { 
+  
+    if (menuHeader.className === "headerNav") {
+      menuHeader.className += " responsive";
       items.forEach(item => {
           item.className += " responsive"
       });
     } else {
-      x.className = "headerNav";
+      menuHeader.className = "headerNav";
       items.forEach(item => {
         item.className = "nav-item"
     });
+      dropdown.classList.remove("click");
     }
   } 
+
+ 
+
+  // dropClick.addEventListener("click", () => {
+    
+  //   if(dropdown.classList.contains("click") )
+  //   {
+  //     dropdown.classList.remove("click");
+  //   } else {
+  //     dropdown.classList.add("click");
+  //   }
+      
+  // })

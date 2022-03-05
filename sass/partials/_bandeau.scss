@@ -6,11 +6,7 @@
     background-size: cover;
     background-repeat: no-repeat;
 
-    @include ecran-s {
-        height: 600px;
-    }
     
-
     h1 {
         font-weight: 800;
         font-size: 75px;
@@ -20,23 +16,39 @@
         z-index: 1;
         padding-bottom: 15px;
     }
-
+    
     h2 {
         font-family: 'Sriracha', cursive;
         font-size: 40px;
+        text-align: center;
         color: $color2;
         padding-top: 15px;
     }
-
+    
     .titre {
         position: relative;
         top: 200px;
         display: flex;
         flex-direction: column;
         align-items: center;
+    
+    
         @include ecran-s {
-            top: 150px;
-        }
+            height: 600px;
+            max-width: 1200px;
 
+            .titre {
+                top: 150px;
+            }
+        }
+    
+        @include mobile {
+            height: 400px;
+            max-width: 800px;
+
+            .titre {
+                top: 100px;
+            }
+        }
     }
 }
