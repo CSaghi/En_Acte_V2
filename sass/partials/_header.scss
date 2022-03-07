@@ -7,10 +7,12 @@ header{
         padding: 0 12px 0 6px;
         margin: 10px;
         border-left: 6px solid $color3;
-        transition: all 0.3s;
+        transition: all 0.5s;
+        
 
         &:hover {
             background-color: $color3;
+            border-radius: 0 50px 50px 0;
         }
     }
 
@@ -25,7 +27,7 @@ header{
         line-height: 100%;
         margin-left: 60px;
         @include mobile {
-        margin: 10px auto;    
+        margin: 10px auto;  
         }
     }
     .icon { 
@@ -56,6 +58,9 @@ header{
 
         .header {
             flex-direction: column;
+        }
+        .logo {
+            margin: 10px auto;
         }
     }
 

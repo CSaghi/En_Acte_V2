@@ -1,0 +1,48 @@
+
+
+.commentaire-list {
+    border: 1px solid rgba($color: #000000, $alpha: .5);
+    width: 100%;
+    margin-top: 30px;
+
+    .commentaire {
+        display: flex;
+        border-bottom: 1px dashed $color1;
+        border-bottom-width: 60%;
+
+    }
+    .auteur-com {
+        padding: 10px;
+        width: 33%;
+
+        .auteur {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px
+        }
+        date-com {
+            font-style: italic;
+            font-weight: 300;
+            font-size: 16px;
+        }
+    }
+    .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(196, 40, 40, 0.1);
+        padding: 10px;
+        width: 100%;
+    }
+
+
+    @include mobile {
+        .commentaire {
+            flex-direction: column;
+
+            .auteur-com, .content {
+                width: 100%;
+            }
+        }
+    }
+}

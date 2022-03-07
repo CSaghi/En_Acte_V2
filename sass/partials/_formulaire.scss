@@ -1,0 +1,72 @@
+.form {
+    
+    background: rgba(196, 40, 40, 0.1);
+    width: 100%;
+    border-radius: 14px;
+    padding: 30px 60px;
+    margin: 30px 0;
+
+    form {
+        display: flex;
+        flex-direction: column;
+
+        input {
+            height: 48px;
+            border: 1px solid $color1;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        textarea {
+            border: 1px solid $color1;
+            border-radius: 8px 8px 0 8px ;
+        }
+
+        .button {
+            width: fit-content;
+            margin-left: 0;
+        }
+    }
+
+    @include mobile {
+        padding: 30px 10px;
+
+    }
+}
+
+.form-artiste {
+    @extend .form; 
+
+    width: 50%;
+    padding: 30px 10px;
+}
+
+.form-image {
+    @extend .form; 
+    
+    form {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        input {
+            background-color: $color2;
+            width:100%;
+            margin: 0 20px 0 0;
+        }
+    }
+}
+
+.form-repres {
+    @extend .form; 
+
+    .cp-date {
+        display: flex;
+        .cp, .date {
+            display: flex;
+            flex-direction: column;
+            width: 20%;
+            margin-right: 60px;
+        }
+    }
+}

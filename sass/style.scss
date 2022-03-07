@@ -3,6 +3,11 @@
 @import 'partials/card';
 @import 'partials/event';
 @import 'partials/header';
+@import 'partials/carousel';
+@import 'partials/lightbox';
+@import 'partials/commentaire';
+@import 'partials/formulaire';
+
 
 * {
     margin: 0;
@@ -27,7 +32,45 @@ a {
     width: 220px;
     height: 3px;
     background-color: $color3;
-    margin: 60px 0;
+    margin: 60px auto;
+}
+
+.breadcrumb {
+    font-style: italic;
+    font-weight: 300;
+    padding: 10px 60px;
+    
+    a {
+        margin:0 5px;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    @include mobile {
+        padding: 10px 15px;
+    }
+}
+
+h1 {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 48px;    
+    text-transform: uppercase;
+    color: $color3;
+    padding-bottom: 15px;
+    border-bottom: 3px solid $color3;
+    width: fit-content;
+    margin: 0 auto 30px auto;
+
+}
+
+h2 {
+    font-family: 'Sriracha', cursive;
+    font-size: 30px;
+    color: $color3;
+    margin: 0 auto 30px auto;
 }
 
 main {
@@ -39,18 +82,11 @@ main {
     }
 }
 
-section {
+.conteneur {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 0 60px;
-
-    h2 {
-        font-family: 'Sriracha', cursive;
-        font-size: 30px;
-        color: $color3;
-        margin: 0 auto 30px auto;
-    }
     
     p {
         margin-bottom: 20px;
@@ -85,6 +121,91 @@ section {
         padding: 0 20px ;
     }
     
+}
+
+.present{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 60px;
+
+    .present-main {
+        width: 65%;
+
+        .artiste {
+            display: flex; 
+            justify-content: space-between;
+        }
+    }
+
+    .present-img {
+        width: 30%;
+
+        img {
+            width: 100%;
+            height: auto;
+            box-shadow: $shadow;
+        }
+    }
+
+    .present-artiste, .present-info {
+        margin: 40px 0;
+
+        p {
+            margin-bottom: auto;
+        }
+
+        .artiste {
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+    }
+
+    @include mobile {
+        flex-direction: column-reverse;
+        padding: 0 20px ;
+
+        h1 {
+            text-align: center;
+        }
+
+        .present-main {
+            width: 100%;
+            margin: 20px auto;
+        }
+
+        .present-img {
+            width: 100%;
+        }
+    }
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    background-color: $color2;
+    padding: 10px;
+    min-width: 45px;
+    min-height: 45px;
+    border: 1px solid $color1;
+    border-radius: 8px;
+    margin: 20px 5px;
+
+    &:hover {
+        color: $color2;
+        background-color: $color3;
+        border: 1px solid $color3;
+    }
 }
 
 footer {
