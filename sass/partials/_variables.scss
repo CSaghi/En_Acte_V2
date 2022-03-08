@@ -17,3 +17,22 @@ $shadow:5px 5px 10px rgba(195, 40, 40, 0.3);
       @content;
     }
   }
+
+.red {
+  color: #C42727;
+
+  &:hover {
+    color: lighten(#c42727, 20);
+    scale: 1.2;
+  
+  }
+}
+
+.green {
+  color: green;
+
+  &:hover {
+    color: lighten(green, 20);
+    scale: 1.2;
+  }
+}

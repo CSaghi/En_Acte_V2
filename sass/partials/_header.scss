@@ -7,12 +7,11 @@ header{
         padding: 0 12px 0 6px;
         margin: 10px;
         border-left: 6px solid $color3;
-        transition: all 0.5s;
+        transition: all 0.3s;
         
 
         &:hover {
             background-color: $color3;
-            border-radius: 0 50px 50px 0;
         }
     }
 
@@ -43,7 +42,7 @@ header{
         max-width: $width;
         display: flex;
         align-items: center;
-        height: 120px;
+        height: 90px;
         margin: 0 auto;
 
     }
@@ -58,6 +57,7 @@ header{
 
         .header {
             flex-direction: column;
+            height: auto;
         }
         .logo {
             margin: 10px auto;

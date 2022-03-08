@@ -1,6 +1,24 @@
+.red {
+  color: #C42727;
+}
+
+.red:hover {
+  color: #e26f6f;
+  scale: 1.2;
+}
+
+.green {
+  color: green;
+}
+
+.green:hover {
+  color: #00e600;
+  scale: 1.2;
+}
+
 .bandeau {
   max-width: 1440px;
-  height: 700px;
+  height: 600px;
   background-image: url(../img/bandeau001.jpg);
   background-position: center;
   background-size: cover;
@@ -42,7 +60,7 @@
 
 @media screen and (max-width: 1200px) {
   .bandeau .titre {
-    height: 600px;
+    height: 550px;
     max-width: 1200px;
   }
   .bandeau .titre .titre {
@@ -204,10 +222,9 @@
 
 .event a:hover {
   background-color: #C42727;
-  border-radius: 0 50px 50px 0;
 }
 
-.event i {
+.event .calendar {
   margin-right: 10px;
   font-size: 30px;
 }
@@ -307,7 +324,7 @@
           flex-grow: 1;
 }
 
-.block-repres .representation i {
+.block-repres .representation .calendar {
   margin-right: 10px;
   font-size: 30px;
 }
@@ -357,13 +374,12 @@ header a, footer a, footer .footer a {
   padding: 0 12px 0 6px;
   margin: 10px;
   border-left: 6px solid #C42727;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 header a:hover, footer a:hover {
   background-color: #C42727;
-  border-radius: 0 50px 50px 0;
 }
 
 header .block-logo, footer .block-logo {
@@ -404,7 +420,7 @@ header .header, footer .header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 120px;
+  height: 90px;
   margin: 0 auto;
 }
 
@@ -424,6 +440,7 @@ header .headerNav, footer .headerNav {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    height: auto;
   }
   header .logo, footer .logo {
     margin: 10px auto;
@@ -508,6 +525,60 @@ header .headerNav, footer .headerNav {
 @media screen and (max-width: 870px) {
   .galerie {
     padding: 0 20px;
+  }
+}
+
+.affiche {
+  position: relative;
+  overflow: hidden;
+  -webkit-box-shadow: 5px 5px 10px rgba(195, 40, 40, 0.3);
+          box-shadow: 5px 5px 10px rgba(195, 40, 40, 0.3);
+}
+
+.affiche:hover .affiche-titre, .affiche:focus .affiche-titre {
+  bottom: 0;
+  opacity: 100;
+  -webkit-animation: moveIn 0.5s;
+          animation: moveIn 0.5s;
+}
+
+.affiche .affiche-titre {
+  position: absolute;
+  width: 100%;
+  bottom: -50;
+  opacity: 0;
+}
+
+.affiche h2 {
+  text-align: center;
+  text-transform: uppercase;
+  background: black;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.5)), color-stop(20%, rgba(0, 0, 0, 0.5)), color-stop(30%, rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0)));
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 20%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0) 100%);
+  color: #ffffff;
+  padding: 300px 0 20px 0;
+  margin-bottom: 0;
+}
+
+@-webkit-keyframes moveIn {
+  from {
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+  }
+  to {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@keyframes moveIn {
+  from {
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+  }
+  to {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
   }
 }
 
@@ -627,7 +698,6 @@ header .headerNav, footer .headerNav {
   display: -ms-flexbox;
   display: flex;
   border-bottom: 1px dashed #000000;
-  border-bottom-width: 60%;
 }
 
 .commentaire-list .auteur-com {
@@ -697,11 +767,21 @@ header .headerNav, footer .headerNav {
   border: 1px solid #000000;
   border-radius: 8px;
   margin-bottom: 10px;
+  padding: 10px;
+}
+
+.form form input:focus, .form-artiste form input:focus, .form-image form input:focus, .form-repres form input:focus {
+  outline: 2px solid #C42727;
 }
 
 .form form textarea, .form-artiste form textarea, .form-image form textarea, .form-repres form textarea {
   border: 1px solid #000000;
   border-radius: 8px 8px 0 8px;
+  padding: 10px;
+}
+
+.form form textarea:focus, .form-artiste form textarea:focus, .form-image form textarea:focus, .form-repres form textarea:focus {
+  outline: 2px solid #C42727;
 }
 
 .form form .button, .form-artiste form .button, .form-image form .button, .form-repres form .button {
@@ -818,6 +898,7 @@ h1 {
   width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto 30px auto;
+  text-align: center;
 }
 
 h2 {
@@ -825,6 +906,10 @@ h2 {
   font-size: 30px;
   color: #C42727;
   margin: 0 auto 30px auto;
+}
+
+i {
+  font-size: 16px;
 }
 
 main {
@@ -980,6 +1065,49 @@ main {
   }
 }
 
+.media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.media .video {
+  width: 33%;
+}
+
+.media .video iframe {
+  width: 100%;
+  height: 320px;
+  padding: 30px 0;
+}
+
+.media .carousel-mini {
+  width: 65%;
+}
+
+@media screen and (max-width: 1200px) {
+  .media {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .media .video {
+    width: 100%;
+  }
+  .media .video iframe {
+    width: 100%;
+    height: 320px;
+    padding: 30px 0;
+  }
+  .media .carousel-mini {
+    width: 100%;
+  }
+}
+
 .pagination {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1016,6 +1144,34 @@ main {
   color: #ffffff;
   background-color: #C42727;
   border: 1px solid #C42727;
+}
+
+.partenaire {
+  text-align: center;
+  border-bottom: 1px dashed #000000;
+  padding: 20px;
+}
+
+.partenaire .partenaire-nom {
+  font-size: 25px;
+  font-weight: bold;
+  border-bottom: 2px solid #000000;
+}
+
+.partenaire .partenaire-desc {
+  padding-bottom: 20px;
+}
+
+.partenaire a, .partenaire footer .footer a, footer .footer .partenaire a {
+  font-style: italic;
+  border-left: 2px solid #C42727;
+  padding: 0 4px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.partenaire a:hover {
+  background-color: rgba(196, 40, 40, 0.1);
 }
 
 footer .footer {

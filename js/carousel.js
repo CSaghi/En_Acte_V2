@@ -20,5 +20,40 @@ $(document).ready(function(){
           }]
   });
 
+  $('.carousel-mini').slick({
+    infinite: true,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    infinite: true,
+    dots: true,
+    responsive: [{
+
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1}
+        }]
+});
+
+  $('.carousel-list').slick({
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    infinite: true,
+    dots: true,
+    responsive: [{
+
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1}
+        }, {
+
+        breakpoint: 870,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1}
+        }]
+});
     
 });

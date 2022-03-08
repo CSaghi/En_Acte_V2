@@ -15,9 +15,7 @@
         img {
             width: 100%;
             box-shadow: $shadow;
-        }
-
-       
+        } 
     }
 
     .slick-list {
@@ -42,5 +40,48 @@
 
     @include mobile {
         padding: 0 20px ;
+    }
+}
+
+.affiche {
+    position: relative;
+    overflow: hidden;
+    box-shadow: $shadow;
+    
+    &:hover, &:focus{
+        .affiche-titre {
+            bottom: 0;
+            opacity: 100;
+            animation: moveIn 0.5s
+        }
+}
+
+.affiche-titre {
+    position: absolute;
+    width: 100%;
+    bottom: -50;
+    opacity: 0;
+
+    }
+    
+    h2 {
+        text-align: center;
+        text-transform: uppercase;
+        background: rgb(0,0,0);
+        background: linear-gradient(0deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 20%, rgba(0,0,0,0) 30%, rgba(0,0,0,0) 100%);
+        color: $color2;
+        padding: 300px 0 20px 0;
+        margin-bottom: 0;
+
+
+    }
+    
+    @keyframes moveIn {
+        from {
+            transform: translateY(50%);
+        }
+        to {
+            transform: translateY(0%);
+        }
     }
 }

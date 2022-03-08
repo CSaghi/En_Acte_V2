@@ -25,11 +25,10 @@
 
         &:hover {
             background-color: $color3;
-            border-radius: 0 50px 50px 0;
         }   
     }
 
-    i {
+    .calendar {
         margin-right: 10px;
         font-size: 30px;
     }
@@ -97,7 +96,7 @@
         box-shadow: $shadow;
         flex-grow: 1;
 
-        i {
+        .calendar {
             margin-right: 10px;
             font-size: 30px;
         }
